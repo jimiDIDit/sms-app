@@ -8,10 +8,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { ServicesComponent } from './pages/services/services.component';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { BlogComponent } from './pages/blog/blog.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
+    ServicesComponent,
+    PortfolioComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +32,7 @@ import { SharedModule } from './shared/shared.module';
     ModalModule.forRoot(),
     GalleryModule,
     LightboxModule,
+    CarouselModule,
     CoreModule,
     SharedModule,
     AppRoutingModule,

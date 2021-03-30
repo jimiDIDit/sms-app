@@ -11,7 +11,7 @@
             <span class="hamburger-inner"></span>
           </span>
         </button>
-        <a class="navbar-brand scroll" href="#" data-aos="fade-down" data-aos-delay="900">
+        <a class="navbar-brand scroll" routerLink="/home" data-aos="fade-down" data-aos-delay="900">
           <img class="normal-logo hidden-xs" width="200px" src="assets/img/logo.png" alt="logo" />
           <img class="scroll-logo hidden-xs" width="50" src="assets/img/logo-small.png" alt="logo" />
           <img class="scroll-logo visible-xs-block" width="40" src="assets/img/logo-small.png" alt="logo" />
@@ -21,61 +21,26 @@
             <button id="search-open" class="btn btn-link" (click)="toggleSearchPanel()"><i class="fa fa-search"></i></button>
           </li>
           <li class="open-signup">
-            <a href="#fakelink"><i class="fa fa-user"></i></a>
+            <a href="#fakelink" class=""><i class="fa fa-user"></i></a>
           </li>
         </ul>
         <div class="navbar-collapse collapse floated" [ngClass]="mobileMenuOpen ? 'in':''" id="navbar-collapse">
           <ul class="nav navbar-nav navbar-with-inside clearfix navbar-right with-border">
-            <li class="active">
-              <a href="#">home</a>
-              <div class=" wrap-inside-nav">
-                <div class="inside-col">
-                  <ul class="inside-nav">
-                    <li><a href="home.html">Home 1</a></li>
-                    <li><a href="home-2.html">Home 2</a></li>
-                  </ul>
-                </div>
-              </div>
+            <li>
+              <a routerLink="/home" routerLinkActive="active">home</a>
             </li>
             <li>
-              <a href="#">Portfolio</a>
-              <div class=" wrap-inside-nav">
-                <div class="inside-col">
-                  <ul class="inside-nav">
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="portfolio-2.html">Portfolio 2</a></li>
-                    <li><a href="portfolio-3.html">Portfolio 3</a></li>
-                    <li><a href="portfolio-single.html">Portfolio single 1</a></li>
-                    <li><a href="portfolio-single-2.html">Portfolio single 2</a></li>
-                  </ul>
-                </div>
-              </div>
+              <a routerLink="/portfolio" routerLinkActive="active">Portfolio</a>
             </li>
             <li>
-              <a href="about.html">about</a>
+              <a routerLink="/about" routerLinkActive="active">about</a>
             </li>
-            <li><a href="services.html">services</a></li>
+            <li><a routerLink="/services" routerLinkActive="active">services</a></li>
             <li>
-              <a href="#">Blog</a>
-              <div class=" wrap-inside-nav">
-                <div class="inside-col">
-                  <ul class="inside-nav">
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="blog-single.html">Blog single</a></li>
-                  </ul>
-                </div>
-              </div>
+              <a routerLink="/blog" routerLinkActive="active">Blog</a>
             </li>
             <li>
-              <a href="#">Contacts</a>
-              <div class=" wrap-inside-nav">
-                <div class="inside-col">
-                  <ul class="inside-nav">
-                    <li><a href="contact.html">Contacts 1 </a></li>
-                    <li><a href="contact-2.html">Contacts 2 </a></li>
-                  </ul>
-                </div>
-              </div>
+              <a routerLink="/contact" routerLinkActive="active">Contact us</a>
             </li>
           </ul>
         </div>
@@ -86,7 +51,7 @@
             <div class="input-group">
               <input type="text" placeholder="Type your search..." class="form-control" autocomplete="off">
               <span class="input-group-btn">
-                <button type="reset" class="btn search-close" id="search-close" (click)="toggleSearchPanel()">
+                <button type="reset" class="btn search-close btn-primary" id="search-close" (click)="toggleSearchPanel()">
                   <i class="fa fa-close"></i>
                 </button>
               </span>
@@ -98,1033 +63,7 @@
   </header>
   <!--./navigation -->
 
-  <!-- ========================== -->
-  <!-- HOME - HEADER -->
-  <!-- ========================== -->
-  <section class="top-header home-header with-bottom-effect transparent-effect dark">
-    <div class="bottom-effect"></div>
-    <div class="header-container">
-      <div class="wrap-section-slider" id="topSlider">
-        <div class="sp-slides">
-          <div class="slide-item sp-slide">
-            <div class="slide-image">
-              <img src="assets/img/sections/section-11.jpg" alt="" />
-            </div>
-            <div class="slide-content ">
-              <p class="top-title sp-layer" data-aos="fade-left" data-aos-delay="1400">Get Sure Marketing Solutions</p>
-              <div class="title sp-layer" data-aos="fade-right" data-aos-delay="1500">Business Solutions</div>
-              <div class="under-title sp-layer" data-aos="fade-up" data-aos-delay="1700">for all your marketing needs</div>
-              <div class="controls sp-layer" data-aos="fade-up" data-aos-delay="1800">
-                <a href="#" class="btn btn-primary">Get Started NOW</a>
-                <a href="#" class="btn btn-info">&nbsp;&nbsp;Discover More&nbsp;&nbsp;</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--./container-->
-  </section>
-
-
-  <!-- ========================== -->
-  <!-- HOME - FEATURES -->
-  <!-- ========================== -->
-  <section class="features-section" id="scroll-trigger">
-    <div class="container">
-      <div class="section-heading ">
-        <div class="section-title">our benefits</div>
-        <div class="section-subtitle">High quality services for every budget</div>
-        <div class="design-arrow"></div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-6 wow" data-aos="fade">
-          <article>
-            <div class="feature-item ">
-              <div class="wrap-feature-icon">
-                <div class="feature-icon">
-                  <span class="icon icon-Carioca"></span>
-                </div>
-              </div>
-              <div class="title">Clean &amp; modern</div>
-              <div class="text">
-                We follow a well known recipe: K.I.S.S. - Keep it simple, silly! No gimmicks, only pure strategy in the simplest of terms
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-3 col-sm-6 wow" data-aos="fade" data-aos-delay="200">
-          <article>
-            <div class="feature-item">
-              <div class="wrap-feature-icon">
-                <div class="feature-icon">
-                  <span class="icon icon-Heart"></span>
-                </div>
-              </div>
-              <div class="title">unique design</div>
-              <div class="text">
-                Original campaigns for every client, because each client is different. So each solution is individualized for your business
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-3 col-sm-6 wow" data-aos="fade" data-aos-delay="400">
-          <article>
-            <div class="feature-item">
-              <div class="wrap-feature-icon">
-                <div class="feature-icon">
-                  <span class="icon  icon-Tools"></span>
-                </div>
-              </div>
-              <div class="title">multipurpose</div>
-              <div class="text">
-                Our goal is to get the most out of every solution. Your website not only is a lead generator, but also a tool for sales conversions
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-3 col-sm-6 wow" data-aos="fade" data-aos-delay="500">
-          <article>
-            <div class="feature-item">
-              <div class="wrap-feature-icon">
-                <div class="feature-icon">
-                  <span class="icon icon-Blog"></span>
-                </div>
-              </div>
-              <div class="title">100% responsive</div>
-              <div class="text">
-                All solutions are built for mutiple devices, and tested before publishing, so your campaigns reach as many customers as possible
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================== -->
-  <!-- HOME - LAPTOPS -->
-  <!-- ========================== -->
-  <section class="laptops-section">
-    <div class="container">
-      <div class="laptops text-center wow" data-aos="fade-up">
-        <img src="assets/img/laptop.jpg" alt="" class="img-responsive" />
-      </div>
-    </div>
-    <div class="container">
-      <div class="content-logo text-center wow" data-aos="fade-up" data-aos-delay="1000">
-        <img src="assets/img/logo.png" alt="" class="img-responsive" />
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================== -->
-  <!-- HOME - AREAS OF EXPERTISE-->
-  <!-- ========================== -->
-  <section class="areas-section with-icon with-top-effect">
-    <div class="section-icon"><span class="icon icon-Umbrella"></span></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-7 col-sm-7 text-right">
-          <div class="clearfix " style="padding-right: 3px;">
-            <div class="above-title">We think & deliver</div>
-            <h4>Areas of expertise</h4>
-          </div>
-          <div><em>Some things can only be learned through expereince</em></div>
-          <div class="design-arrow inline-arrow"></div>
-          <p class="large">Our years of experience in over a dozen industries give us the knowledge that is passed directly to our clients and their businesses.</p>
-          <p>While reading a book can teach you a little, getting your 'hands dirty' gives you much more than just information. Not every situation is the same, just like our clients. We bring years of real life experience in growing a business, and the best practices of effective marketing for small business.</p>
-        </div>
-        <div class="col-md-5 col-sm-5 text-center">
-          <img src="assets/img/areas.png" alt="" class="img-responsive" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================== -->
-  <!-- HOME - ACHIEVEMENTS -->
-  <!-- ========================== -->
-  <section class="achievements-section with-bottom-effect dark dark-strong">
-    <div class="bottom-effect"></div>
-    <div class="container dark-content">
-      <div class="row list-achieve">
-        <div class="col-md-3 col-sm-3 col-xs-6 wow" data-aos="fade" data-aos-delay="400">
-          <article>
-            <div class="achieve-item">
-              <div class="achieve-icon">
-                <span class="icon icon-Wallet"></span>
-              </div>
-              <div class="count">31</div>
-              <div class="name">projects delivered</div>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-3 col-sm-3 col-xs-6 wow" data-aos="fade" data-aos-delay="600">
-          <article>
-            <div class="achieve-item">
-              <div class="achieve-icon">
-                <span class="icon icon-Cup"></span>
-              </div>
-              <div class="count">12</div>
-              <div class="name">awards won</div>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-3 col-sm-3 col-xs-6 wow" data-aos="fade" data-aos-delay="800">
-          <article>
-            <div class="achieve-item">
-              <div class="achieve-icon">
-                <span class="icon icon-Like"></span>
-              </div>
-              <div class="count">40</div>
-              <div class="name">happy clients</div>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-3 col-sm-3 col-xs-6 wow" data-aos="fade" data-aos-delay="900">
-          <article>
-            <div class="achieve-item">
-              <div class="achieve-icon">
-                <span class="icon icon-Users"></span>
-              </div>
-              <div class="count">5</div>
-              <div class="name">employees working</div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================== -->
-  <!-- HOME - LATEST WORKS -->
-  <!-- ========================== -->
-  <section class="latest-works-section clearfix">
-    <div class="container">
-      <div class="section-heading">
-        <div class="section-title">Latest Works</div>
-        <div class="section-subtitle">Some of our favorite projects for some great clients</div>
-        <div class="design-arrow"></div>
-      </div>
-    </div>
-
-    <div class="scroll-pane ">
-      <div class="scroll-content">
-        <div class="scroll-content-item  ">
-          <a href="assets/img/img3.jpg" class="fancybox">
-            <img src="assets/img/img3.jpg" alt="" />
-          </a>
-          <div class="name">dahls 160</div>
-        </div>
-        <div class="scroll-content-item  ">
-          <a href="assets/img/img4.jpg" class="fancybox">
-            <img src="assets/img/img4.jpg" alt="" />
-          </a>
-          <div class="name">dahls 160</div>
-        </div>
-        <div class="scroll-content-item  ">
-          <a href="assets/img/img1.jpg" class="fancybox">
-            <img src="assets/img/img1.jpg" alt="" />
-          </a>
-          <div class="name">dahls 160</div>
-        </div>
-        <div class="scroll-content-item  ">
-          <a href="assets/img/img2.jpg" class="fancybox">
-            <img src="assets/img/img2.jpg" alt="" />
-          </a>
-          <div class="name">dahls 160</div>
-        </div>
-        <div class="scroll-content-item  ">
-          <a href="assets/img/img3.jpg" class="fancybox">
-            <img src="assets/img/img3.jpg" alt="" />
-          </a>
-          <div class="name">dahls 160</div>
-        </div>
-        <div class="scroll-content-item  ">
-          <a href="assets/img/img3.jpg" class="fancybox">
-            <img src="assets/img/img3.jpg" alt="" />
-          </a>
-          <div class="name">dahls 160</div>
-        </div>
-        <div class="scroll-content-item  ">
-          <a href="assets/img/img4.jpg" class="fancybox">
-            <img src="assets/img/img4.jpg" alt="" />
-          </a>
-          <div class="name">dahls 160</div>
-        </div>
-        <div class="scroll-content-item  ">
-          <a href="assets/img/img1.jpg" class="fancybox">
-            <img src="assets/img/img1.jpg" alt="" />
-          </a>
-          <div class="name">dahls 160</div>
-        </div>
-        <div class="scroll-content-item  ">
-          <a href="assets/img/img2.jpg" class="fancybox">
-            <img src="assets/img/img2.jpg" alt="" />
-          </a>
-          <div class="name">dahls 160</div>
-        </div>
-        <div class="scroll-content-item  ">
-          <a href="assets/img/img3.jpg" class="fancybox">
-            <img src="assets/img/img3.jpg" alt="" />
-          </a>
-          <div class="name">dahls 160</div>
-        </div>
-        <div class="scroll-content-item  ">
-          <a href="assets/img/img3.jpg" class="fancybox">
-            <img src="assets/img/img3.jpg" alt="" />
-          </a>
-          <div class="name">dahls 160</div>
-        </div>
-        <div class="scroll-content-item  ">
-          <a href="assets/img/img4.jpg" class="fancybox">
-            <img src="assets/img/img4.jpg" alt="" />
-          </a>
-          <div class="name">dahls 160</div>
-        </div>
-        <div class="scroll-content-item  ">
-          <a href="assets/img/img1.jpg" class="fancybox">
-            <img src="assets/img/img1.jpg" alt="" />
-          </a>
-          <div class="name">dahls 160</div>
-        </div>
-        <div class="scroll-content-item  ">
-          <a href="assets/img/img2.jpg" class="fancybox">
-            <img src="assets/img/img2.jpg" alt="" />
-          </a>
-          <div class="name">dahls 160</div>
-        </div>
-        <div class="scroll-content-item  ">
-          <a href="assets/img/img3.jpg" class="fancybox">
-            <img src="assets/img/img3.jpg" alt="" />
-          </a>
-          <div class="name">dahls 160</div>
-        </div>
-      </div>
-      <div class="scroll-bar-wrap ">
-        <div class="scroll-bar"></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================== -->
-  <!-- HOME - STEPS  -->
-  <!-- ========================== -->
-  <section class="steps-section with-icon ">
-    <div class="section-icon"><span class="icon icon-Umbrella"></span></div>
-    <div class="container">
-      <div class="section-heading">
-        <div class="section-title">simple steps . quick results</div>
-        <div class="section-subtitle">Lorem ipsum dolor sit amet consectetur elit</div>
-        <div class="design-arrow"></div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row steps-list">
-        <div class="col-md-4 col-sm-4 col-xs-4 wow" data-aos="fade" data-aos-delay="400">
-          <div class="step-item">
-            <div class="item-icon" data-count="1">
-              <span class="icon icon-Pencil"></span>
-            </div>
-            <div class="item-text">
-              <h5>We Plan &amp; <br />
-                Sketch .
-              </h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-4 wow" data-aos="fade" data-aos-delay="600">
-          <div class="step-item invert">
-            <div class="item-icon" data-count="2">
-              <span class="icon icon-Glasses"></span>
-            </div>
-            <div class="item-text">
-              <h5>We Design &amp; <br />
-                Develop .
-              </h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-4 wow" data-aos="fade" data-aos-delay="800">
-          <div class="step-item">
-            <div class="item-icon" data-count="3">
-              <span class="icon icon-Plaine"></span>
-            </div>
-            <div class="item-text">
-              <h5>We Test &amp; <br />
-                Deliver .
-              </h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container results-container" data-aos="results">
-      <div class="row">
-        <div class="col-md-6  col-sm-6">
-          <ul class="skills">
-            <li class="skills-animated" *ngFor="let bar of progressBars; let i = index;">
-              <span>{{bar?.title}}</span>
-              <progressbar [max]="bar.limit" [value]="bar.percent | async" class="progress">
-                  <span class="progress-bar-tooltip">{{bar.percent | async}}</span>%
-              </progressbar>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-6 col-sm-6">
-          <div class="results-description">
-            <h5 class="italic-title">Every customer is importany to us!</h5>
-            <h4>Our Experienced guys at Oscend always giving their best
-              to make the clients happy!!
-            </h4>
-            <p>Amco laboris nisi ut aliquip xea commodo consequt. Duis aute irure dolor reprehenderit voluptate velit esse
-              cillum dolore
-              fugiat lore ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et
-              dolore magna
-              aliqua ut enim ad mid veniam quis nostrud exercitation ullamco laboris nisid. Lorem ipsum dolor sit amet
-              consectetur adip
-              isicing elit sed eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================== -->
-  <!-- HOME - BROWSERS  -->
-  <!-- ========================== -->
-  <section class="browsers-section with-bottom-effect ">
-    <div class="bottom-effect"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <img src="assets/img/browsers-image.png" alt=" " class="img-responsive" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================== -->
-  <!-- HOME - SERVICES  -->
-  <!-- ========================== -->
-  <section class="services-section ">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-sm-4 col-xs-4">
-          <div class="service-item">
-            <div class="media-left">
-              <div class="wrap-service-icon">
-                <div class="service-icon">
-                  <span class="icon icon-Flag"></span>
-                </div>
-              </div>
-            </div>
-            <div class="media-body">
-              <h5>awesome icons</h5>
-              <p><em>best solutions that works</em></p>
-              <p>Lorem ipsum dolor sit amet consect letur se
-                adipisicing elit sed don eiusmod.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-4">
-          <div class="service-item">
-            <div class="media-left">
-              <div class="wrap-service-icon">
-                <div class="service-icon">
-                  <span class="icon icon-Carioca"></span>
-                </div>
-              </div>
-            </div>
-            <div class="media-body">
-              <h5>Clean & modern</h5>
-              <p><em>lorem ipsum dolor sit amet</em></p>
-              <p>Lorem ipsum dolor sit amet consect letur se
-                adipisicing elit sed don eiusmod.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-4">
-          <div class="service-item">
-            <div class="media-left">
-              <div class="wrap-service-icon">
-                <div class="service-icon">
-                  <span class="icon icon-Planet"></span>
-                </div>
-              </div>
-            </div>
-            <div class="media-body">
-              <h5>multipurpose</h5>
-              <p><em>providing excellent services</em></p>
-              <p>Lorem ipsum dolor sit amet consect letur se
-                adipisicing elit sed don eiusmod.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="services-divider">
-          <div class="col-md-4 col-sm-4 col-xs-4"></div>
-          <div class="col-md-4 col-sm-4 col-xs-4"></div>
-          <div class="col-md-4 col-sm-4 col-xs-4"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 col-sm-4 col-xs-4">
-          <div class="service-item">
-            <div class="media-left">
-              <div class="wrap-service-icon">
-                <div class="service-icon">
-                  <span class="icon icon-Folder"></span>
-                </div>
-              </div>
-            </div>
-            <div class="media-body">
-              <h5>well documented</h5>
-              <p><em>providing excellent services</em></p>
-              <p>Lorem ipsum dolor sit amet consect letur se
-                adipisicing elit sed don eiusmod.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-4">
-          <div class="service-item">
-            <div class="media-left">
-              <div class="wrap-service-icon">
-                <div class="service-icon">
-                  <span class="icon icon-Layers"></span>
-                </div>
-              </div>
-            </div>
-            <div class="media-body">
-              <h5>multiple colors</h5>
-              <p><em>best solutions that works</em></p>
-              <p>Lorem ipsum dolor sit amet consect letur se
-                adipisicing elit sed don eiusmod.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-4">
-          <div class="service-item">
-            <div class="media-left">
-              <div class="wrap-service-icon">
-                <div class="service-icon">
-                  <span class="icon icon-DesktopMonitor"></span>
-                </div>
-              </div>
-            </div>
-            <div class="media-body">
-              <h5>responsive design</h5>
-              <p><em>lorem ipsum dolor sit amet</em></p>
-              <p>Lorem ipsum dolor sit amet consect letur se
-                adipisicing elit sed don eiusmod.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================== -->
-  <!-- HOME - VIDEO SECTION -->
-  <!-- ========================== -->
-  <section class="video-section with-bottom-effect dark dark-strong">
-    <div class="video-play">
-      <video playsinline="playsinline" autoplay="autoplay" [muted]="true" loop="loop">
-        <source src="https://firebasestorage.googleapis.com/v0/b/sure-marketing-solutions.appspot.com/o/videoplayback.mp4?alt=media&token=eeb58823-9e2b-48e2-99c1-6c72ea48b563" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="bottom-effect"></div>
-    <div class="container dark-content">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <div class="title">Watch our Intro Video</div>
-          <em>Lorem ipsum dolor sit amet consectetur elit</em>
-          <a href="https://youtu.be/MFQ1CBz4sv4" target="_blank" class="btn-play fancybox-video"></a>
-          <div class="duration">Duration : <span>4:35</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================== -->
-  <!-- HOME - TEAM -->
-  <!-- ========================== -->
-  <section class="team-section with-bottom-effect">
-    <div class="bottom-effect"></div>
-    <div class="container">
-      <div class="section-heading wow fadeIn">
-        <div class="section-title">experienced team</div>
-        <div class="section-subtitle">Lorem ipsum dolor amet consectetur adipisic elit</div>
-        <div class="design-arrow"></div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="wrap-team-slider wow fadeIn">
-        <div class="prev-btn"><span class="icon invertX icon-Goto"></span></div>
-        <div class="next-btn"><span class="icon icon-Goto"></span></div>
-        <div class="team-slider enable-stick-slider"
-          data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "prevArrow" : ".prev-btn", "nextArrow": ".next-btn" }'>
-          <div class="slide-item">
-            <div class="image">
-              <img src="assets/img/team/member-1.png" alt="" />
-            </div>
-            <div class="slide-description">
-              <div class="member-info">
-                <div class="name">dan tarkist</div>
-                <div class="position">Creative Director</div>
-              </div>
-              <div class="contacts">
-                <ul>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="slide-item">
-            <div class="image">
-              <img src="assets/img/team/member-3.png" alt="" />
-            </div>
-            <div class="slide-description">
-              <div class="member-info">
-                <div class="name">sarina ken</div>
-                <div class="position">Creative Director</div>
-              </div>
-              <div class="contacts">
-                <ul>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="slide-item">
-            <div class="image">
-              <img src="assets/img/team/member-2.png" alt="" />
-            </div>
-            <div class="slide-description">
-              <div class="member-info">
-                <div class="name">ana mes</div>
-                <div class="position">Product Manager</div>
-              </div>
-              <div class="contacts">
-                <ul>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="slide-item">
-            <div class="image">
-              <img src="assets/img/team/member-1.png" alt="" />
-            </div>
-            <div class="slide-description">
-              <div class="member-info">
-                <div class="name">dan tarkist</div>
-                <div class="position">Creative Director</div>
-              </div>
-              <div class="contacts">
-                <ul>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="slide-item">
-            <div class="image">
-              <img src="assets/img/team/member-3.png" alt="" />
-            </div>
-            <div class="slide-description">
-              <div class="member-info">
-                <div class="name">sarina ken</div>
-                <div class="position">Creative Director</div>
-              </div>
-              <div class="contacts">
-                <ul>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div> -->
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ========================== -->
-  <!-- REVIEWS SECTION -->
-  <!-- ========================== -->
-  <section class="reviews-section">
-    <div class="container">
-      <div class="section-heading">
-        <div class="section-title">What clients said</div>
-        <div class="section-subtitle">Lorem ipsum dolor amet consectetur adipisic elit</div>
-        <div class="design-arrow"></div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="reviews-slider enable-owl-carousel" data-single-item="true">
-        <div class="slide-item">
-          <div class="media-left">
-            <div class="image-block">
-              <img src="assets/img/review-img1.jpg" alt="" />
-            </div>
-          </div>
-          <div class="media-body">
-            <div class="description-block">
-              <div class="name">
-                <span>James H. ken </span>
-                <em>Oscend Creative Inc.</em>
-              </div>
-              <div class="review">
-                <em>Lorem ipsum dolor sit amet consecteur adipiscing elit sed eiusmod tempor ncididue labore
-                  etor dolore magna aliqua. Ut enim ad minim veniam qu nostrud exercitat ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat duis autes irure dolor rep.</em>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <!-- <div class="slide-item">
-          <div class="media-left">
-            <div class="image-block">
-              <img src="assets/img/review-img1.jpg" alt="" />
-            </div>
-          </div>
-          <div class="media-body">
-            <div class="description-block">
-              <div class="name">
-                <span>James H. ken </span>
-                <em>Oscend Creative Inc.</em>
-              </div>
-              <div class="review">
-                <em>Lorem ipsum dolor sit amet consecteur adipiscing elit sed eiusmod tempor ncididue labore
-                  etor dolore magna aliqua. Ut enim ad minim veniam qu nostrud exercitat ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat duis autes irure dolor rep.</em>
-              </div>
-            </div>
-          </div>
-
-        </div> -->
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================== -->
-  <!-- BUY SECTION -->
-  <!-- ========================== -->
-  <section class="buy-section with-icon">
-    <div class="section-icon"><span class="icon icon-Umbrella"></span></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-1 col-sm-9 wow fadeInLeft">
-          <div class="section-text">
-            <div class=" vcenter like">
-              <span class="icon icon-Briefcase"></span>
-            </div>
-            <div class="buy-text vcenter">
-              <div class="top-text">Best & affordable web applications</div>
-              <div class="bottom-text">Discuss your project with us</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-3 wow fadeInRight">
-          <a href="#" class="btn btn-info ">Get Started NOW</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================== -->
-  <!-- HOME - PRICE -->
-  <!-- ========================== -->
-  <section class="price-section">
-    <div class="with-bottom-effect dark dark-strong pricing-background">
-      <div class="bottom-effect"></div>
-    </div>
-    <div class="dark-content">
-      <div class="container">
-        <div class="section-heading">
-          <div class="section-title">our pricing plans</div>
-          <div class="section-subtitle">Lorem ipsum dolor amet consectetur adipisic elit</div>
-          <div class="design-arrow"></div>
-        </div>
-      </div>
-    </div>
-    <div class="dark-content">
-      <div class="container">
-        <div class="row no-gutter plans-list text-center">
-          <div class="col-md-4 col-sm-4 vcenter">
-            <div class="plan-item wow zoomIn" data-wow-delay="0.3s">
-              <div class="item-heading">
-                <span class="name">basic</span>
-                <div class="count">$125</div>
-                <em>per month</em>
-              </div>
-              <div class="item-body">
-                <ul class="list-features">
-                  <li class="active">2 Hosting Accounts</li>
-                  <li class="active">10 FREE Users</li>
-                  <li class="active">600GB Monthly Bandwidth</li>
-                  <li>Complete Analytics</li>
-                  <li>Unlimited Databses</li>
-                </ul>
-              </div>
-              <div class="item-footer text-center">
-                <a href="#" class="btn btn-default">sign up now</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 vcenter">
-            <div class="plan-item wow zoomIn active" data-wow-delay="0.6s">
-              <div class="item-heading">
-                <span class="name">popular</span>
-                <div class="count">$175</div>
-                <em>per month</em>
-              </div>
-              <div class="item-body">
-                <ul class="list-features">
-                  <li class="active">8 Hosting Accounts </li>
-                  <li class="active">30 FREE Users</li>
-                  <li class="active">2 TB Monthly Bandwidth </li>
-                  <li class="active">Complete Analytics</li>
-                  <li>Unlimited Support</li>
-                </ul>
-              </div>
-              <div class="item-footer text-center">
-                <a href="#" class="btn btn-default">sign up now</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4  col-sm-4 vcenter">
-            <div class="plan-item wow zoomIn" data-wow-delay="0.3s">
-              <div class="item-heading">
-                <span class="name">premier</span>
-                <div class="count">$250</div>
-                <em>per month</em>
-              </div>
-              <div class="item-body">
-                <ul class="list-features">
-                  <li class="active">25 Hosting Accounts </li>
-                  <li class="active">Unlimited FREE Users </li>
-                  <li class="active">8 TB Monthly Bandwidth </li>
-                  <li class="active">Complete Analytics</li>
-                  <li class="active">Unlimited Storage</li>
-                </ul>
-              </div>
-              <div class="item-footer text-center">
-                <a href="#" class="btn btn-default">sign up now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- ========================== -->
-  <!-- HOME - LATEST NEWS -->
-  <!-- ========================== -->
-  <section class="latest-news-section with-icon with-top-effect clearfix">
-    <div class="section-icon"><span class="icon icon-Umbrella"></span></div>
-    <div class="container">
-      <div class="section-heading">
-        <div class="section-title">latest news</div>
-        <div class="section-subtitle">Lorem ipsum dolor sit amet consectetur elit</div>
-        <div class="design-arrow"></div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-sm-4 wow fadeInUp">
-          <div class="news-item">
-            <div class="meta">
-              <div class="meta-item"><span class="icon icon-Tag"></span>MOBile ui, creative</div>
-              <div class="meta-item"><span class="icon icon-Agenda"></span>26 SEP</div>
-            </div>
-            <div class="image">
-              <a href="#">
-                <img src="assets/img/news/image1.jpg" alt="" />
-                <div class="image-content">
-                  <span class="read-more">read more</span>
-                </div>
-              </a>
-            </div>
-            <div class="user-avatar clearfix">
-              <div class="avatar">
-                <img src="assets/img/avatars/img1.png" alt="" />
-              </div>
-            </div>
-            <div class="news-body">
-              <h5>Lorem ipsum dolor amet consectetur</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elitsed
-                eiusmod tempor enim minim veniam quis notru exercit ation
-                Lorem ipsum dolor sit amet.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 wow fadeInUp">
-          <div class="news-item">
-            <div class="meta">
-              <div class="meta-item"><span class="icon icon-Tag"></span>project</div>
-              <div class="meta-item"><span class="icon icon-Agenda"></span>20 SEP</div>
-            </div>
-            <div class="image">
-              <a href="#">
-                <img src="assets/img/news/image2.jpg" alt="" />
-                <div class="image-content">
-                  <span class="read-more">read more</span>
-                </div>
-              </a>
-            </div>
-            <div class="user-avatar clearfix">
-              <div class="avatar">
-                <img src="assets/img/avatars/img2.png" alt="" />
-              </div>
-            </div>
-            <div class="news-body">
-              <h5>eiusmod tempor incididunt labore</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elitsed
-                eiusmod tempor enim minim veniam quis notru exercit ation
-                Lorem ipsum dolor sit amet.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 wow fadeInUp">
-          <div class="news-item">
-            <div class="meta">
-              <div class="meta-item"><span class="icon icon-Tag"></span>photography, analysis</div>
-              <div class="meta-item"><span class="icon icon-Agenda"></span>28 SEP</div>
-            </div>
-            <div class="image">
-              <a href="#">
-                <img src="assets/img/news/image3.jpg" alt="" />
-                <div class="image-content">
-                  <span class="read-more">read more</span>
-                </div>
-              </a>
-            </div>
-            <div class="user-avatar clearfix">
-              <div class="avatar">
-                <img src="assets/img/avatars/img1.png" alt="" />
-              </div>
-            </div>
-            <div class="news-body">
-              <h5>liua enim minim veniam quis nostrui</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elitsed
-                eiusmod tempor enim minim veniam quis notru exercit ation
-                Lorem ipsum dolor sit amet.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================== -->
-  <!-- HOME - SLIDER -->
-  <!-- ========================== -->
-  <section class="slider-section dark dark-strong with-bottom-effect">
-    <div class="bottom-effect"></div>
-    <div class="dark-content">
-      <div class="wrap-section-slider enable-owl-carousel" data-single-item="true">
-        <div class="slide-item">
-          <div class="slider-title">latest from twitter <i class="fa fa-twitter"></i> oscend creative agency</div>
-          <p class="large">Lorem ipsum dolor sit amet consecteur adipiscing elit sed eiusmod tempor ncididue ut labore
-            etor dolore magna aliqua. Ut enim <br />
-            minim veniam qua nostrud exercitat ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          <div class="time">2 minutes ago</div>
-        </div>
-        <div class="slide-item">
-          <div class="slider-title">latest from twitter <i class="fa fa-twitter"></i> oscend creative agency</div>
-          <p class="large">Lorem ipsum dolor sit amet consecteur adipiscing elit sed eiusmod tempor ncididue ut labore
-            etor dolore magna aliqua. Ut enim <br />
-            minim veniam qua nostrud exercitat ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          <div class="time">6 minutes ago</div>
-        </div>
-        <div class="slide-item">
-          <div class="slider-title">latest from twitter <i class="fa fa-twitter"></i> oscend creative agency</div>
-          <p class="large">Lorem ipsum dolor sit amet consecteur adipiscing elit sed eiusmod tempor ncididue ut labore
-            etor dolore magna aliqua. Ut enim <br />
-            minim veniam qua nostrud exercitat ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          <div class="time">12 minutes ago</div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================== -->
-  <!-- HOME - CLIENTS -->
-  <!-- ========================== -->
-  <section class="clients-section clearfix">
-    <div class="container">
-      <div class="section-heading wow fadeInDown">
-        <div class="section-title">trusted clients</div>
-        <div class="section-subtitle">Lorem ipsum dolor sit amet consectetur elit</div>
-        <div class="design-arrow"></div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="list-clients">
-        <div class="client-item wow fadeInLeft">
-          <img src="assets/img/partners/partner-4.png" alt="" />
-        </div>
-        <div class="client-item wow fadeInLeft">
-          <img src="assets/img/partners/partner-1.png" alt="" />
-        </div>
-        <div class="client-item wow fadeInRight">
-          <img src="assets/img/partners/partner-3.png" alt="" />
-        </div>
-        <div class="client-item wow fadeInRight">
-          <img src="assets/img/partners/partner-2.png" alt="" />
-        </div>
-      </div>
-    </div>
-  </section>
+<router-outlet></router-outlet>
 
   <!-- ========================== -->
   <!-- FOOTER -->
@@ -1143,8 +82,8 @@
                 <span class="icon icon-Like"></span>
               </div>
               <div class="buy-text vcenter">
-                <div class="top-text">oscend - a creative & multipurpose template</div>
-                <div class="bottom-text">Lorem ipsum dolor sit amet consectetur elit sed</div>
+                <div class="top-text">Sure Marketing Solutions - a digital marketing agency</div>
+                <div class="bottom-text">Small Business Strategies and Solutions</div>
               </div>
             </div>
           </div>
@@ -1157,6 +96,7 @@
     <!-- ========================== -->
     <!-- FOOTER - SOCIAL -->
     <!-- ========================== -->
+    <!-- TODO: Complete social links routes -->
     <section class="social-section dark dark-strong">
       <div class="container dark-content">
         <div class="tt">We are social 24/7 - Get in touch</div>
@@ -1164,7 +104,6 @@
           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
           <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
           <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
           <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
         </ul>
@@ -1174,15 +113,13 @@
     <!-- ========================== -->
     <!-- FOOTER - FOOTER -->
     <!-- ========================== -->
+    <!-- TODO: Complete domain links routing -->
     <section class="footer-section">
       <div class="container">
         <div class="row">
           <div class="col-md-3 col-sm-3">
             <h5>about us</h5>
-            <p>Lorem ipsum dolor sit amet consect etural
-              adipisicing elit sed don eiusmod temp enim
-              minim veniam quis notrud exercitation lore
-              ipsum dolor sit amet.</p>
+            <p>Sure Marketing Solutions is a digital marketing agency specializing in helping small businesses reach their full potential using the latest tools, techniques and practices.</p>
           </div>
           <div class="col-md-3 col-sm-3">
             <h5>Sitemap</h5>
@@ -1191,7 +128,7 @@
                 <ul class="footer-nav">
                   <li><a href="#">About Us</a></li>
                   <li><a href="#">Portfolio</a></li>
-                  <li class="active"><a href="#">Latest News</a></li>
+                  <li class=""><a href="#">Latest News</a></li>
                   <li><a href="#">Contact us</a></li>
                 </ul>
               </div>
@@ -1208,13 +145,13 @@
             <h5>Contact info</h5>
             <ul class="contacts-list">
               <li>
-                <p><i class="icon icon-House"></i>68 Landsriver Street, California USA 22036</p>
+                <p><i class="icon icon-House"></i>843 Fairbanks Ave. Newark, OH 43055</p>
               </li>
               <li>
-                <p><i class="icon icon-Phone2"></i>0800 126 01268</p>
+                <p><i class="icon icon-Phone2"></i><a href="tel:+17404051633">740 405 1633</a></p>
               </li>
               <li>
-                <p><i class="icon icon-Mail"></i><a href="mailto:support@oscend.com">support@oscend.com</a> </p>
+                <p><i class="icon icon-Mail"></i><a href="mailto:info@suremarketingsolutions.com">info@suremarketingsolutions.com</a> </p>
 
               </li>
             </ul>
@@ -1223,7 +160,7 @@
             <h5>newsletter</h5>
             <p>
               Subscribe to our newsletter for latest updates
-              about our creative agency
+              about our digital marketing agency
             </p>
             <div class="form-group has-feedback">
               <input type="email" class="form-control " placeholder="Email address ...">
@@ -1239,7 +176,10 @@
     </section>
   </footer>
 
-<ng-template #modalContent>
+<button class="btn btn-link circle back-to-top" data-aos="fade-up" data-aos-offest="800" data-aos-once="false"
+  (click)="backToTop()"><i class="fa fa-chevron-up"></i></button>
+
+<!-- <ng-template #modalContent>
   <div class="modal-header">
     <h4 class="modal-title">Modal title</h4>
     <button type="button" class="close" aria-label="Close" (click)="modalRef.hide()">
@@ -1252,4 +192,4 @@
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" (click)="modalRef.hide()">Close</button>
   </div>
-</ng-template>
+</ng-template> -->
