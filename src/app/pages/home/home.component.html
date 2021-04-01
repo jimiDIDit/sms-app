@@ -434,10 +434,9 @@
             </div>
           </div>
           <div class="media-body">
-            <h5>awesome icons</h5>
-            <p><em>Original icons and fonts</em></p>
-            <p>Lorem ipsum dolor sit amet consect letur se
-              adipisicing elit sed don eiusmod.</p>
+            <h5>Something special</h5>
+            <p><em>Original icons and images</em></p>
+            <p>Your website and other media will be as unique as your business.</p>
           </div>
         </div>
       </div>
@@ -452,9 +451,8 @@
           </div>
           <div class="media-body">
             <h5>Clean & modern</h5>
-            <p><em>lorem ipsum dolor sit amet</em></p>
-            <p>Lorem ipsum dolor sit amet consect letur se
-              adipisicing elit sed don eiusmod.
+            <p><em>Enhance what your business does</em></p>
+            <p>Present your products and/or services in a fresh, creative way.
             </p>
           </div>
         </div>
@@ -470,9 +468,8 @@
           </div>
           <div class="media-body">
             <h5>multipurpose</h5>
-            <p><em>providing excellent services</em></p>
-            <p>Lorem ipsum dolor sit amet consect letur se
-              adipisicing elit sed don eiusmod.</p>
+            <p><em>Get the most out of every user interaction</em></p>
+            <p>Every interaction with your business offers multiple conversion opportunitues</p>
           </div>
         </div>
       </div>
@@ -495,10 +492,9 @@
             </div>
           </div>
           <div class="media-body">
-            <h5>well documented</h5>
-            <p><em>providing excellent services</em></p>
-            <p>Lorem ipsum dolor sit amet consect letur se
-              adipisicing elit sed don eiusmod.</p>
+            <h5>digital assets</h5>
+            <p><em>Get what you pay for</em></p>
+            <p>All assets we create belong to you, it's as simple as that.</p>
           </div>
         </div>
       </div>
@@ -512,10 +508,9 @@
             </div>
           </div>
           <div class="media-body">
-            <h5>multiple colors</h5>
-            <p><em>best solutions that works</em></p>
-            <p>Lorem ipsum dolor sit amet consect letur se
-              adipisicing elit sed don eiusmod.
+            <h5>multiple options</h5>
+            <p><em>Real input and oversight</em></p>
+            <p>Even the basic packages give you options as well as revision of all services.
             </p>
           </div>
         </div>
@@ -531,9 +526,8 @@
           </div>
           <div class="media-body">
             <h5>responsive design</h5>
-            <p><em>lorem ipsum dolor sit amet</em></p>
-            <p>Lorem ipsum dolor sit amet consect letur se
-              adipisicing elit sed don eiusmod.</p>
+            <p><em>Designed for all users</em></p>
+            <p>All designs and services are built and tested to be used on multiple devices.</p>
           </div>
         </div>
       </div>
@@ -611,6 +605,7 @@
 <!-- ========================== -->
 <!-- REVIEWS SECTION -->
 <!-- ========================== -->
+<!-- TODO: Finish Reviews Content -->
 <section class="reviews-section">
   <div class="container">
     <div class="section-heading">
@@ -620,28 +615,32 @@
     </div>
   </div>
   <div class="container">
-    <div class="reviews-slider enable-owl-carousel" data-single-item="true">
-      <div class="slide-item">
-        <div class="media-left">
-          <div class="image-block">
-            <img src="assets/img/review-img1.jpg" alt="" />
-          </div>
-        </div>
-        <div class="media-body">
-          <div class="description-block">
-            <div class="name">
-              <span>James H. ken </span>
-              <em>Oscend Creative Inc.</em>
+    <owl-carousel-o [options]="reviewsSliderOptions" class="reviews-slider enable-owl-carousel" data-single-item="true">
+      <ng-container *ngFor="let slide of reviewsSlides">
+        <ng-template carouselSlide>
+          <div class="slide-item">
+            <div class="media-left">
+              <div class="image-block">
+                <img [src]="'assets/img/' + slide.src" alt="" />
+              </div>
             </div>
-            <div class="review">
-              <em>Lorem ipsum dolor sit amet consecteur adipiscing elit sed eiusmod tempor ncididue labore
-                etor dolore magna aliqua. Ut enim ad minim veniam qu nostrud exercitat ullamco laboris
-                nisi ut aliquip ex ea commodo consequat duis autes irure dolor rep.</em>
+            <div class="media-body">
+              <div class="description-block">
+                <div class="name">
+                  <span>{{slide.name}}</span>
+                  <em>{{slide.company}}</em>
+                </div>
+                <div class="review">
+                  <em>{{slide.review}}</em>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-      </div>
+          </div>
+
+        </ng-template>
+      </ng-container>
+
       <!-- <div class="slide-item">
           <div class="media-left">
             <div class="image-block">
@@ -664,7 +663,7 @@
 
         </div> -->
 
-    </div>
+      </owl-carousel-o>
   </div>
 </section>
 

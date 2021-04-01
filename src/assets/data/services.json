@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "title": "Something special",
+      "substitle": "Original icons and images",
+      "text": "Your website and other media will be as unique as your business, standing out in the minds of customers.",
+      "icon": "icon-Flag"
+    },
+    {
+      "title": "Clean & modern",
+      "substitle": "Enhance what your business does",
+      "text": "Present your products and/or services in a fresh, creative way, throwing out filler and useless content.",
+      "icon": "icon-Carioca"
+    },
+    {
+      "title": "multipurpose",
+      "substitle": "Get the  most out of every service",
+      "text": "Every user interaction with your business provides multiple sales and lead conversion opportunities.",
+      "icon": "icon-planet"
+    },
+    {
+      "title": "Digital assets",
+      "substitle": "Get what you pay for, plus so much more",
+      "text": "All assets we create belong to you, including all mock-ups and final versions. This is only fair.",
+      "icon": "icon-Folder"
+    },
+    {
+      "title": "Multiple options",
+      "substitle": "Your input is very much valued and considered",
+      "text": "Even the basic packages give you options as well as revision of all services.",
+      "icon": "icon-Layers"
+    },
+    {
+      "title": "Responsive design",
+      "substitle": "Built for all users, on all devices",
+      "text": "Every aspect of our services is built and tested to be used on multiple devices, and multiple browsers.",
+      "icon": "icon-DesktopMonitor"
+    }
+  ]
+}
