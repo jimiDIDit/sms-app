@@ -1,0 +1,16 @@
+<div bsModal #messageModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="message-modal"
+  [config]="{ show: showMessage}">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header" [ngClass]="'bg-' + type">
+        <h4 id="dialog-sizes-name1" class="modal-title pull-left">{{title}}</h4>
+        <button type="button" class="close pull-right" (click)="close()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div [innerHTML]="text | safeHtml"></div>
+      </div>
+    </div>
+  </div>
+</div>

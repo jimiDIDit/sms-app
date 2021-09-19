@@ -1,14 +1,47 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="">
 <head>
   <meta charset="utf-8">
+  <meta name="description" content="Sure marketing solutions, an ohio-based marketing agency inspired to tell your story. with our team of professionals,
+          we combine talents to bring your brand and your story to life in new, unique ways. This frees up your time for what really
+          matters to you: your passion for your business. Along the way, we hope to inspire others to think outside the box and
+          have fun doing it.">
   <title>Sure Marketing Solutions</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/d4fc54f771.js"></script>
 </head>
 <body data-aos="fixed-header" data-aos-offset="1200" data-aos-once="false">
   <sms-root></sms-root>
+  <!-- Messenger Chat Plugin Code -->
+  <div id="fb-root"></div>
+
+  <!-- Your Chat Plugin code -->
+  <div id="fb-customer-chat" class="fb-customerchat">
+  </div>
+
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "100502348801906");
+    chatbox.setAttribute("attribution", "biz_inbox");
+
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: 'v12.0'
+      });
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 </body>
 </html>

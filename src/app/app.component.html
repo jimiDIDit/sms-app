@@ -3,19 +3,26 @@
   <!-- ========================== -->
   <!-- Navigation -->
   <!-- ========================== -->
-  <header class="header scrolling-header" [ngClass]="searchPanelOpen ? 'search-open':''">
-    <nav id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container relative-nav-container">
-        <button class="toggle-button hamburger hamburger--collapse visible-xs-block" [ngClass]="mobileMenuOpen ? 'is-active':''" type="button" (click)="toggleMobileMenu()">
+  <header #topNav class="header scrolling-header" [ngClass]="searchPanelOpen ? 'search-open':''">
+    <nav id="nav" class="navbar navbar-fixed-top justify-content-center align-items-center" role="navigation">
+      <a class="navbar-brand scroll" routerLink="/" data-aos="fade-down" data-aos-delay="900">
+        <img class="normal-logo" width="200px" src="assets/img/logo.png" alt="logo" />
+        <!-- <img class="scroll-logo d-xs-none" width="50" src="assets/img/logo-small.png" alt="logo" />
+        <img class="scroll-logo d-md-none" width="40" src="assets/img/logo-small.png" alt="logo" /> -->
+      </a>
+      <!-- <div class="d-flex w-100 justify-content-start">
+        <button class="toggle-button hamburger hamburger--collapse d-xs-block d-md-none" [ngClass]="mobileMenuOpen ? 'is-active':''" type="button" (click)="toggleMobileMenu()">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
         </button>
-        <a class="navbar-brand scroll" routerLink="/home" data-aos="fade-down" data-aos-delay="900">
-          <img class="normal-logo hidden-xs" width="200px" src="assets/img/logo.png" alt="logo" />
-          <img class="scroll-logo hidden-xs" width="50" src="assets/img/logo-small.png" alt="logo" />
-          <img class="scroll-logo visible-xs-block" width="40" src="assets/img/logo-small.png" alt="logo" />
-        </a>
+        <div class="col-4 mx-auto">
+          <a class="navbar-brand scroll" routerLink="/home" data-aos="fade-down" data-aos-delay="900">
+            <img class="normal-logo d-xs-none" width="200px" src="assets/img/logo.png" alt="logo" />
+            <img class="scroll-logo d-xs-none" width="50" src="assets/img/logo-small.png" alt="logo" />
+            <img class="scroll-logo d-xs-none" width="40" src="assets/img/logo-small.png" alt="logo" />
+          </a>
+        </div>
         <ul class="nav navbar-nav navbar-right nav-icons wrap-user-control">
           <li>
             <button id="search-open" class="btn btn-link" (click)="toggleSearchPanel()"><i class="fa fa-search"></i></button>
@@ -24,13 +31,13 @@
             <a href="#fakelink" class=""><i class="fa fa-user"></i></a>
           </li>
         </ul>
-        <div class="navbar-collapse collapse floated" [ngClass]="mobileMenuOpen ? 'in':''" id="navbar-collapse">
-          <ul class="nav navbar-nav navbar-with-inside clearfix navbar-right with-border">
+        <div class="navbar-collapse col-6 ml-auto" [ngClass]="[mobileMenuOpen ? topNav.clientWidth > 760 ? 'in open':'collapse':'']" id="navbar-collapse">
+          <ul class="nav navbar-nav navbar-with-inside navbar-right with-border">
             <li>
               <a routerLink="/home" routerLinkActive="active">home</a>
             </li>
             <li>
-              <a routerLink="/portfolio" routerLinkActive="active">Portfolio</a>
+              <a routerLink="/portfolio" routerLinkActive="active">portfolio</a>
             </li>
             <li>
               <a routerLink="/about" routerLinkActive="active">about</a>
@@ -58,12 +65,13 @@
             </div>
           </form>
         </div>
-      </div>
+      </div> -->
     </nav>
   </header>
   <!--./navigation -->
-
-<router-outlet></router-outlet>
+<main class="main">
+  <router-outlet></router-outlet>
+</main>
 
   <!-- ========================== -->
   <!-- FOOTER -->
@@ -87,8 +95,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 col-sm-3  wow fadeInRight">
-            <a href="#" class="btn btn-info ">Buy it now</a>
+          <div class="col-md-3 col-sm-3">
+            <a href="#" class="btn btn-info ">Free Consultation</a>
           </div>
         </div>
       </div>
@@ -96,16 +104,14 @@
     <!-- ========================== -->
     <!-- FOOTER - SOCIAL -->
     <!-- ========================== -->
-    <!-- TODO: Complete social links routes -->
     <section class="social-section dark dark-strong">
       <div class="container dark-content">
         <div class="tt">We are social 24/7 - Get in touch</div>
         <ul class="list-socials">
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-          <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-          <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+          <li><a href="https://twitter.com/sms_ohio" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://facebook.com/suremarketingsolutions" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/sure-marketing-solutions" target="_blank"><i class="fa fa-linkedin" target="_blank"></i></a></li>
+          <li><a href="https://instagram.com/suremarketingsolutions" target="_blank"><i class="fa fa-instagram"></i></a></li>
         </ul>
       </div>
     </section>
@@ -113,7 +119,7 @@
     <!-- ========================== -->
     <!-- FOOTER - FOOTER -->
     <!-- ========================== -->
-    <!-- TODO: Complete domain links routing -->
+    <!-- TODO: Complete domain links routing [FAQ, Get Help] -->
     <section class="footer-section">
       <div class="container">
         <div class="row">
@@ -121,26 +127,26 @@
             <h5>about us</h5>
             <p>Sure Marketing Solutions is a digital marketing agency specializing in helping small businesses reach their full potential using the latest tools, techniques and practices.</p>
           </div>
-          <div class="col-md-3 col-sm-3">
+          <!-- <div class="col-md-3 col-sm-3">
             <h5>Sitemap</h5>
             <div class="row">
               <div class="col-md-6">
                 <ul class="footer-nav">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Portfolio</a></li>
-                  <li class=""><a href="#">Latest News</a></li>
-                  <li><a href="#">Contact us</a></li>
+                  <li><a routerLink="/about">About Us</a></li>
+                  <li><a routerLink="/portfolio">Portfolio</a></li>
+                  <li class=""><a routerLink="/blog">Latest News</a></li>
+                  <li><a routerLink="/contact">Contact us</a></li>
                 </ul>
               </div>
               <div class="col-md-6">
                 <ul class="footer-nav">
                   <li><a href="#">Get Help</a></li>
-                  <li><a href="#">Careers</a></li>
+                  <li><a routerLink="/contact">Careers</a></li>
                   <li><a href="#">FAQ's</a></li>
                 </ul>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="col-md-3 col-sm-3">
             <h5>Contact info</h5>
             <ul class="contacts-list">
@@ -148,7 +154,7 @@
                 <p><i class="icon icon-House"></i>843 Fairbanks Ave. Newark, OH 43055</p>
               </li>
               <li>
-                <p><i class="icon icon-Phone2"></i><a href="tel:+17404051633">740 405 1633</a></p>
+                <p><i class="icon icon-Phone2"></i><a href="tel:+16144524916">614 452 4916</a></p>
               </li>
               <li>
                 <p><i class="icon icon-Mail"></i><a href="mailto:info@suremarketingsolutions.com">info@suremarketingsolutions.com</a> </p>
@@ -156,23 +162,26 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-3 col-sm-3">
-            <h5>newsletter</h5>
+          <div class="col-md-6 col-sm-3">
+            <h5>Want to know More?</h5>
             <p>
-              Subscribe to our newsletter for latest updates
-              about our digital marketing agency
+              Subscribe for latest updates
+              about SURE MARKETING SOLUTIONS
             </p>
-            <div class="form-group has-feedback">
-              <input type="email" class="form-control " placeholder="Email address ...">
-              <i class="icon icon-Mail form-control-feedback"></i>
-            </div>
+            <form name="smallSubscriberForm" #subscriberForm="ngForm" class="form-group has-feedback">
+              <input #subscriber="ngModel" [(ngModel)]="subscriberModel.email" name="email" type="email" class="form-control mb-3" placeholder="Email address ..." required>
+              <button style="cursor: pointer;" class="mr-0 btn btn-xs btn-light" [disabled]="subscriberForm.errors" (click)="addSubscriber(subscriberModel.email, subscriberForm)">
+                subscribe
+                <i class="icon icon-Mail form-control-feedback"></i>
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </section>
 
     <section class="copyright-section">
-      <p>©2017 <span>Sure Marketing Solutions LLC </span>. All Rights Reserved</p>
+      <p>©2019<span>Sure Marketing Solutions LLC </span>. All Rights Reserved</p>
     </section>
   </footer>
 

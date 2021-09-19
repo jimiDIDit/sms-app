@@ -9,7 +9,7 @@ import { ServicesComponent } from './pages/services/services.component';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: HomeComponent
   },
   {
@@ -34,7 +34,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'home',
+    redirectTo: '',
     pathMatch: 'full'
   }
 ];

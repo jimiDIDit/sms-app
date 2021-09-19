@@ -1,5 +1,21 @@
-$primary: #DBAE58;
-$primary-dark: #a58242;
+$primary: rgb(219, 174, 88) !default;
+$secondary: rgb(219, 206, 88) !default;
+$dark: rgb(219, 140, 88) !default;
+$accent: rgb(219, 88, 174) !default;
+$black: rgb(30, 30, 30) !default;
+$white: rgb(255,255,255) !default;
+
+$bg-primary: $primary !default;
+$bg-secondary: $secondary !default;
+$bg-primary-dark: $dark !default;
+$bg-dark: $dark !default;
+$bg-light: $white !default;
+
+$text-primary: $primary !default;
+$text-secondary: Secondary !default;
+$text-accent: $accent !default;
+$text-light: $white !default;
+$text-dark: $black !default;
 /* ========================================
 Hamburgers variables
 */

@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
-import { ModalModule } from 'ngx-bootstrap/modal';
+// import { ModalModule } from 'ngx-bootstrap/modal';
 import { GalleryModule } from 'ng-gallery';
 import { LightboxModule } from 'ng-gallery/lightbox';
+import { DragScrollModule } from 'ngx-drag-scroll';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
@@ -28,10 +30,12 @@ import { BlogComponent } from './pages/blog/blog.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ProgressbarModule.forRoot(),
-    ModalModule.forRoot(),
+    /* ModalModule.forRoot(), */
     GalleryModule,
     LightboxModule,
+    DragScrollModule,
     CarouselModule,
     CoreModule,
     SharedModule,

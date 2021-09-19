@@ -5,19 +5,37 @@
   <div class="bottom-effect"></div>
   <div class="header-container">
     <div class="wrap-section-slider" id="topSlider">
-      <div class="sp-slides">
-        <div class="slide-item sp-slide">
-          <div class="slide-image">
-            <img src="assets/img/sections/section-11.jpg" alt="" />
-          </div>
-          <div class="slide-content ">
-            <p class="top-title sp-layer" data-aos="fade-left" data-aos-delay="1400">Get Sure Marketing Solutions</p>
-            <div class="title sp-layer" data-aos="fade-right" data-aos-delay="1500">Business Solutions</div>
-            <div class="under-title sp-layer" data-aos="fade-up" data-aos-delay="1700">for all your marketing needs
+      <div class="sp-slides-container">
+        <div class="sp-mask">
+          <div class="slide-item">
+            <div class="slide-image">
+                          <img src="assets/img/sections/section-11.jpg" alt="" />
+
+              <!-- <video id="top-video" autoplay="true" loop="true" title="Video by Free Videos from Pexels" alt="Video Header - At work">
+                <source class="" src="assets/local-video/top-video.mp4" type="video/mp4">
+              </video> -->
             </div>
-            <div class="controls sp-layer" data-aos="fade-up" data-aos-delay="1800">
-              <a href="#" class="btn btn-primary">Get Started NOW</a>
-              <a href="#" class="btn btn-info">&nbsp;&nbsp;Discover More&nbsp;&nbsp;</a>
+            <div class="slide-content">
+              <!-- <p class="top-title sp-layer" data-aos="fade-left" data-aos-delay="1400">Central Ohio's</p> -->
+              <div class="title sp-layer" data-aos="fade-right" data-aos-delay="1500"><h1>Sure Marketing Solutions</h1></div>
+              <div class="under-title sp-layer" data-aos="fade-up" data-aos-delay="1700">Digital Marketing & Strategy for your Small Business
+              </div>
+              <div class="controls sp-layer" data-aos="fade-up" data-aos-delay="1800">
+                <div class="subscribe-title text-center mb-3">
+                  <h6>Subscribe for updates and more information on how we can help your business.</h6>
+                </div>
+                <!-- <a href="#contact-section" class="btn btn-primary">Get Started NOW</a>
+                <a routerLink="/about" class="btn btn-info">&nbsp;&nbsp;Discover More&nbsp;&nbsp;</a> -->
+                <form name="subscriberForm" #subscriberForm="ngForm" class="subscriber-form d-flex justify-content-center">
+                  <div class="input-group col-sm-12 col-md-4 mb-3">
+                    <input [(ngModel)]="subscriberModel.email" #email="ngModel" type="text" class="subscriber-input form-control" name="subscriber" placeholder="Your@Email" aria-label="Subscriber Email"
+                      aria-describedby="subscriber-email">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" (click)="addSubscriber(email.value, subscriberForm)"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -32,17 +50,17 @@
 <!-- ========================== -->
 <!-- HOME - FEATURES -->
 <!-- ========================== -->
-<section class="features-section" id="scroll-trigger">
+<section class="features-section">
   <div class="container">
-    <div class="section-heading ">
-      <div class="section-title">our benefits</div>
-      <div class="section-subtitle">High quality services for every budget</div>
+    <div class="section-heading " data-aos="fade-up">
+      <div class="section-title">The Pitch</div>
+      <div class="section-subtitle">We develop high quality marketing solutions for every budget</div>
       <div class="design-arrow"></div>
     </div>
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-md-3 col-sm-6 wow" data-aos="fade">
+      <div class="col-md-3 col-sm-6" data-aos="fade-up">
         <article>
           <div class="feature-item ">
             <div class="wrap-feature-icon">
@@ -50,15 +68,14 @@
                 <span class="icon icon-Carioca"></span>
               </div>
             </div>
-            <div class="title">Clean &amp; modern</div>
+            <div class="title">Fresh &amp; Simple</div>
             <div class="text">
-              We follow a well known recipe: K.I.S.S. - Keep it simple, silly! No gimmicks, only pure strategy in the
-              simplest of terms
+              We make marketing easy for you from start to finsih. We won't push features, or content that isn't needed. We set marketing goals based on your vision and story, develop a plan, then execute
             </div>
           </div>
         </article>
       </div>
-      <div class="col-md-3 col-sm-6 wow" data-aos="fade" data-aos-delay="200">
+      <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="50">
         <article>
           <div class="feature-item">
             <div class="wrap-feature-icon">
@@ -68,13 +85,13 @@
             </div>
             <div class="title">unique approach</div>
             <div class="text">
-              Original campaigns for every client, because each client is different. So each solution is individualized
-              for your business
+              Every marketing component we develop is one-of-a-kind, because every one of our clients is different. Your unique project is customized
+              for your business, to meet your needs, and tell your story
             </div>
           </div>
         </article>
       </div>
-      <div class="col-md-3 col-sm-6 wow" data-aos="fade" data-aos-delay="400">
+      <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
         <article>
           <div class="feature-item">
             <div class="wrap-feature-icon">
@@ -84,13 +101,13 @@
             </div>
             <div class="title">effective &amp; efficient</div>
             <div class="text">
-              Our goal is to get the most out of every solution. For example: Your website is not only a lead generator, but also a
-              tool for sales conversions
+              We will help you connect with an audience to generate leads, retain exisitng consumers/clients, and increase. New and existing. Combining components such as webapp is an open door available to your , but also a
+              tool for branding, interacting with your customers,
             </div>
           </div>
         </article>
       </div>
-      <div class="col-md-3 col-sm-6 wow" data-aos="fade" data-aos-delay="500">
+      <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="150">
         <article>
           <div class="feature-item">
             <div class="wrap-feature-icon">
@@ -98,10 +115,9 @@
                 <span class="icon icon-Blog"></span>
               </div>
             </div>
-            <div class="title">100% responsive</div>
+            <div class="title">Sleek &amp; Modern</div>
             <div class="text">
-              All solutions are built for mutiple devices, and tested before publishing, so your campaigns reach as many
-              customers as possible
+              Websites, media and other content are designed for mutiple devices and browsers, and thoroughly tested during every phase. We are dedicated to your brand, your story, and your success
             </div>
           </div>
         </article>
@@ -116,13 +132,13 @@
 <!-- ========================== -->
 <section class="laptops-section">
   <div class="container">
-    <div class="laptops text-center wow" data-aos="fade-up">
-      <img src="assets/img/laptop.jpg" alt="" class="img-responsive" />
+    <div class="laptops row justify-content-center">
+      <img src="assets/img/laptop.jpg" alt="Two Laptops" class="col-12" data-aos="fade-up"/>
     </div>
   </div>
   <div class="container">
-    <div class="content-logo text-center wow" data-aos="fade-up" data-aos-delay="1000">
-      <img src="assets/img/logo_clipping_mask.png" alt="Sure Marketing Solutions clipped logo" class="img-responsive" />
+    <div class="content-logo row justify-content-center">
+      <img src="assets/img/logo_clipping_mask.png" alt="Sure Marketing Solutions clipped logo" class="col-12" data-aos="fade-up"/>
     </div>
   </div>
 </section>
@@ -135,17 +151,34 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7 col-sm-7 text-right">
-        <div class="clearfix " style="padding-right: 3px;">
+        <div class="clearfix" style="padding-right: 3px;">
           <div class="above-title">We think & deliver</div>
           <h4>Areas of expertise</h4>
         </div>
-        <div><em>Some things can only be learned through expereince</em></div>
+        <div><em>Get the benefit of 10+ years experience in:</em></div>
         <div class="design-arrow inline-arrow"></div>
-        <p class="large">Our years of experience in over a dozen industries give us the knowledge that is passed
-          directly to our clients and their businesses.</p>
-        <p>While reading a book can teach you a little, getting your 'hands dirty' gives you much more than just
-          information. Not every situation is the same, just like our clients. We bring years of real life experience in
-          growing a business, and the best practices of effective marketing for small business.</p>
+          <ul class="list-group experience-list">
+            <li class="list-group-item">graphic and web design <span class="icon icon-DesktopMonitor"></span></li>
+            <li class="list-group-item">social media <span class="icon icon-Users"></span></li>
+            <li class="list-group-item">email <span class="icon icon-Mail"></span></li>
+            <li class="list-group-item">web hosting <span class="icon icon-Cloud"></span></li>
+            <li class="list-group-item">content <span class="icon icon-Pen"></span></li>
+            <li class="list-group-item">performance (ads) <span class="icon icon-ChartUp"></span></li>
+            <li class="list-group-item">search engine optimization <span class="icon icon-Search"></span></li>
+            <li class="list-group-item">e-commerce <span class="icon icon-FullShoppingCart"></span></li>
+          </ul>
+          <div class="row">
+            <div class="services-divider">
+              <div class="col-md-4 col-sm-4 col-xs-4"></div>
+              <div class="col-md-4 col-sm-4 col-xs-4"></div>
+              <div class="col-md-4 col-sm-4 col-xs-4"></div>
+            </div>
+          </div>
+          <div class="design-arrow inline-arrow"></div>
+          <p class="large text-capitalize">we are sure marketing solutions, an ohio-based marketing agency inspired to tell your story. with our team of professionals,
+          we combine talents to bring your brand and your story to life in new, unique ways. This frees up your time for what really
+          matters to you: your passion for your business. Along the way, we hope to inspire others to think outside the box and
+          have fun doing it.</p>
       </div>
       <div class="col-md-5 col-sm-5 text-center">
         <img src="assets/img/areas.png" alt="" class="img-responsive" />
@@ -161,8 +194,8 @@
   <div class="bottom-effect"></div>
   <div class="container dark-content">
     <div class="row list-achieve">
-      <div class="col-md-3 col-sm-3 col-xs-6 wow" data-aos="fade" data-aos-delay="400">
-        <article>
+      <div class="col-md-3 col-sm-3 col-xs-6" data-aos="fade-up" data-aos-delay="50">
+        <article class="">
           <div class="achieve-item">
             <div class="achieve-icon">
               <span class="icon icon-Wallet"></span>
@@ -172,35 +205,35 @@
           </div>
         </article>
       </div>
-      <div class="col-md-3 col-sm-3 col-xs-6 wow" data-aos="fade" data-aos-delay="600">
+      <div class="col-md-3 col-sm-3 col-xs-6" data-aos="fade-up" data-aos-delay="100">
         <article>
           <div class="achieve-item">
             <div class="achieve-icon">
               <span class="icon icon-Cup"></span>
             </div>
-            <div class="count">12</div>
+            <div class="count">5</div>
             <div class="name">awards won</div>
           </div>
         </article>
       </div>
-      <div class="col-md-3 col-sm-3 col-xs-6 wow" data-aos="fade" data-aos-delay="800">
+      <div class="col-md-3 col-sm-3 col-xs-6" data-aos="fade-up" data-aos-delay="150">
         <article>
           <div class="achieve-item">
             <div class="achieve-icon">
               <span class="icon icon-Like"></span>
             </div>
-            <div class="count">40</div>
+            <div class="count">17</div>
             <div class="name">happy clients</div>
           </div>
         </article>
       </div>
-      <div class="col-md-3 col-sm-3 col-xs-6 wow" data-aos="fade" data-aos-delay="900">
+      <div class="col-md-3 col-sm-3 col-xs-6" data-aos="fade-up" data-aos-delay="200">
         <article>
           <div class="achieve-item">
             <div class="achieve-icon">
               <span class="icon icon-Users"></span>
             </div>
-            <div class="count">5</div>
+            <div class="count">3</div>
             <div class="name">employees working</div>
           </div>
         </article>
@@ -213,7 +246,7 @@
 <!-- HOME - LATEST WORKS -->
 <!-- ========================== -->
 <!-- TODO: Complete portfolio sample projects -->
-<section class="latest-works-section clearfix">
+<section class="latest-works-section">
   <div class="container">
     <div class="section-heading">
       <div class="section-title">Latest Works</div>
@@ -222,103 +255,49 @@
     </div>
   </div>
 
-  <div class="scroll-pane ">
-    <div class="scroll-content">
-      <div class="scroll-content-item  ">
-        <a href="assets/img/img3.jpg" class="fancybox">
-          <img src="assets/img/img3.jpg" alt="" />
-        </a>
-        <div class="name">dahls 160</div>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 portfolio-item" style="margin-bottom: 60px;">
+        <div class="m-3 row justify-content-center align-items-center">
+          <img src="assets/img/logos/tds.logo.png" class="" alt="Tai-Dye Studios Logo">
+        </div>
+        <div class="row justify-content-center portfolio-image">
+            <a href="https://tai-dye-studios.com" target="_blank">
+            <img src="assets/img/portfolio/TDS.gif" class="portfolio-image" alt="Tai-Dye Studios Web App Animation GIF">
+          </a>
+        </div>
       </div>
-      <div class="scroll-content-item  ">
-        <a href="assets/img/img4.jpg" class="fancybox">
-          <img src="assets/img/img4.jpg" alt="" />
-        </a>
-        <div class="name">dahls 160</div>
+      <div class="col-12 portfolio-item">
+        <div class="m-3 row justify-content-center align-items-center">
+          <img src="assets/img/logos/sla.logo.png" width="200" class="" alt="Steph Loughman Author Logo">
+        </div>
+        <div class="row justify-content-center portfolio-image">
+            <a href="https://stephloughman.com" target="_blank">
+            <img src="assets/img/portfolio/SLA.gif" class="img-block" alt="Steph Loughman Author Website Animation GIF">
+          </a>
+        </div>
       </div>
-      <div class="scroll-content-item  ">
-        <a href="assets/img/img1.jpg" class="fancybox">
-          <img src="assets/img/img1.jpg" alt="" />
-        </a>
-        <div class="name">dahls 160</div>
-      </div>
-      <div class="scroll-content-item  ">
-        <a href="assets/img/img2.jpg" class="fancybox">
-          <img src="assets/img/img2.jpg" alt="" />
-        </a>
-        <div class="name">dahls 160</div>
-      </div>
-      <div class="scroll-content-item  ">
-        <a href="assets/img/img3.jpg" class="fancybox">
-          <img src="assets/img/img3.jpg" alt="" />
-        </a>
-        <div class="name">dahls 160</div>
-      </div>
-      <div class="scroll-content-item  ">
-        <a href="assets/img/img3.jpg" class="fancybox">
-          <img src="assets/img/img3.jpg" alt="" />
-        </a>
-        <div class="name">dahls 160</div>
-      </div>
-      <div class="scroll-content-item  ">
-        <a href="assets/img/img4.jpg" class="fancybox">
-          <img src="assets/img/img4.jpg" alt="" />
-        </a>
-        <div class="name">dahls 160</div>
-      </div>
-      <div class="scroll-content-item  ">
-        <a href="assets/img/img1.jpg" class="fancybox">
-          <img src="assets/img/img1.jpg" alt="" />
-        </a>
-        <div class="name">dahls 160</div>
-      </div>
-      <div class="scroll-content-item  ">
-        <a href="assets/img/img2.jpg" class="fancybox">
-          <img src="assets/img/img2.jpg" alt="" />
-        </a>
-        <div class="name">dahls 160</div>
-      </div>
-      <div class="scroll-content-item  ">
-        <a href="assets/img/img3.jpg" class="fancybox">
-          <img src="assets/img/img3.jpg" alt="" />
-        </a>
-        <div class="name">dahls 160</div>
-      </div>
-      <div class="scroll-content-item  ">
-        <a href="assets/img/img3.jpg" class="fancybox">
-          <img src="assets/img/img3.jpg" alt="" />
-        </a>
-        <div class="name">dahls 160</div>
-      </div>
-      <div class="scroll-content-item  ">
-        <a href="assets/img/img4.jpg" class="fancybox">
-          <img src="assets/img/img4.jpg" alt="" />
-        </a>
-        <div class="name">dahls 160</div>
-      </div>
-      <div class="scroll-content-item  ">
-        <a href="assets/img/img1.jpg" class="fancybox">
-          <img src="assets/img/img1.jpg" alt="" />
-        </a>
-        <div class="name">dahls 160</div>
-      </div>
-      <div class="scroll-content-item  ">
-        <a href="assets/img/img2.jpg" class="fancybox">
-          <img src="assets/img/img2.jpg" alt="" />
-        </a>
-        <div class="name">dahls 160</div>
-      </div>
-      <div class="scroll-content-item  ">
-        <a href="assets/img/img3.jpg" class="fancybox">
-          <img src="assets/img/img3.jpg" alt="" />
-        </a>
-        <div class="name">dahls 160</div>
-      </div>
-    </div>
-    <div class="scroll-bar-wrap ">
-      <div class="scroll-bar"></div>
     </div>
   </div>
+
+  <!-- <div class="scroll-pane">
+    <div class="scroll-content">
+       <div class="scroll-content-item " *ngFor="let img of portfolio">
+          <a [href]="'assets/img/img' + img +'.jpg'" class="fancybox">
+            <img [src]="'assets/img/img' + img +'.jpg'" alt="" />
+          </a>
+          <div class="name">dahls 160</div>
+        </div>
+
+    </div>
+    <div class="scroll-bar-wrap ">
+      <div class="scroll-bar ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" style="width: 100%;">
+        <div class="ui-handle-helper-parent" style="width: 0px;"><span class="ui-slider-handle ui-state-default ui-corner-all"
+            tabindex="0" style="left: 0%; width: 588.847px; margin-left: -294.423px;"><span
+              class="ui-icon ui-icon-grip-dotted-vertical"></span></span></div>
+      </div>
+    </div>
+  </div> -->
 </section>
 
 
@@ -330,13 +309,13 @@
   <div class="container">
     <div class="section-heading">
       <div class="section-title">simple steps - quick results</div>
-      <div class="section-subtitle">A complicated campaign isn't needed to get results, just smart planning</div>
+      <div class="section-subtitle">Thoughtful planning goes a long way</div>
       <div class="design-arrow"></div>
     </div>
   </div>
   <div class="container">
     <div class="row steps-list">
-      <div class="col-md-4 col-sm-4 col-xs-4 wow" data-aos="fade" data-aos-delay="400">
+      <div class="col-md-4 col-sm-4 col-xs-4" data-aos="fade-left" data-aos-delay="200">
         <div class="step-item">
           <div class="item-icon" data-count="1">
             <span class="icon icon-Pencil"></span>
@@ -348,7 +327,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-4 wow" data-aos="fade" data-aos-delay="600">
+      <div class="col-md-4 col-sm-4 col-xs-4" data-aos="fade-left" data-aos-delay="400">
         <div class="step-item invert">
           <div class="item-icon" data-count="2">
             <span class="icon icon-Glasses"></span>
@@ -360,7 +339,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-4 wow" data-aos="fade" data-aos-delay="800">
+      <div class="col-md-4 col-sm-4 col-xs-4" data-aos="fade-left" data-aos-delay="600">
         <div class="step-item">
           <div class="item-icon" data-count="3">
             <span class="icon icon-Plaine"></span>
@@ -374,6 +353,7 @@
       </div>
     </div>
   </div>
+  <!-- TODO: Add services percentage progress bars -->
   <div class="container results-container" data-aos="results">
     <div class="row">
       <div class="col-md-6  col-sm-6">
@@ -389,13 +369,12 @@
       <div class="col-md-6 col-sm-6">
         <div class="results-description">
           <h5 class="italic-title">Every customer is importany to us!</h5>
-          <h4>Our experienced team at Sure Marketing Solutions always does their best
+          <h4>The experienced team at Sure Marketing Solutions always does their best
             to make clients happy!!
           </h4>
-          <p>We take the time to listen to our clients, and ask targeted questions so we understand what your short, and
-            long-term goals are. If we dont' help you get the results you're expecting, our team will tweak, and update
-            solutions to meet and exceed all expectations. With our 100% satisfaction guarantee, you can rest easy
-            knowing your business is going to grow, in sales and recognition.
+          <p>Your story matters to us; it should reflect your values! That’s why we developed our three-step process to ensure we’re
+          creating the right content for you. As we plan and research, we build a strategy with your feedback and goals to create
+          a successful project, big or small.
           </p>
         </div>
       </div>
@@ -407,12 +386,12 @@
 <!-- HOME - BROWSERS  -->
 <!-- TODO: Design new image for BROWSERS SECTION -->
 <!-- ========================== -->
-<section class="browsers-section with-bottom-effect ">
+<section class="browsers-section with-bottom-effect d-none d-md-block">
   <div class="bottom-effect"></div>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <img src="assets/img/browsers-image.png" alt=" " class="img-responsive" />
+        <img src="assets/img/sections/section-9.jpg" alt=" " class="img-responsive" />
       </div>
     </div>
   </div>
@@ -421,10 +400,10 @@
 <!-- ========================== -->
 <!-- HOME - SERVICES  -->
 <!-- ========================== -->
-<section class="services-section ">
+<section class="services-section">
   <div class="container">
     <div class="row">
-      <div class="col-md-4 col-sm-4 col-xs-4">
+      <div class="col-md-4 col-sm-4 col-xs-4" data-aos="fade-up">
         <div class="service-item">
           <div class="media-left">
             <div class="wrap-service-icon">
@@ -435,12 +414,12 @@
           </div>
           <div class="media-body">
             <h5>Something special</h5>
-            <p><em>Original icons and images</em></p>
-            <p>Your website and other media will be as unique as your business.</p>
+            <p><em>Original content and designs</em></p>
+            <p>Your unique project will be built on a solid branding foundation, combined with your values and goals</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-4">
+      <div class="col-md-4 col-sm-4 col-xs-4" data-aos="fade-up" data-aos-delay="200">
         <div class="service-item">
           <div class="media-left">
             <div class="wrap-service-icon">
@@ -451,13 +430,13 @@
           </div>
           <div class="media-body">
             <h5>Clean & modern</h5>
-            <p><em>Enhance what your business does</em></p>
-            <p>Present your products and/or services in a fresh, creative way.
+            <p><em>Get your business noticed</em></p>
+            <p>Add new content to your website, or start a new project with a fresh, and creative design
             </p>
           </div>
         </div>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-4">
+      <div class="col-md-4 col-sm-4 col-xs-4" data-aos="fade-up" data-aos-delay="400">
         <div class="service-item">
           <div class="media-left">
             <div class="wrap-service-icon">
@@ -468,8 +447,8 @@
           </div>
           <div class="media-body">
             <h5>multipurpose</h5>
-            <p><em>Get the most out of every user interaction</em></p>
-            <p>Every interaction with your business offers multiple conversion opportunitues</p>
+            <p><em>Get the most out a project</em></p>
+            <p>Websites provide many opportunitues, including email lead generation, and sales conversions</p>
           </div>
         </div>
       </div>
@@ -482,7 +461,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4 col-sm-4 col-xs-4">
+      <div class="col-md-4 col-sm-4 col-xs-4" data-aos="fade-up" data-aos-delay="500">
         <div class="service-item">
           <div class="media-left">
             <div class="wrap-service-icon">
@@ -493,12 +472,12 @@
           </div>
           <div class="media-body">
             <h5>digital assets</h5>
-            <p><em>Get what you pay for</em></p>
-            <p>All assets we create belong to you, it's as simple as that.</p>
+            <p><em>All creative assets are yours</em></p>
+            <p>We don't re-use your assets for other clients, only for our own gallery and portfolio</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-4">
+      <div class="col-md-4 col-sm-4 col-xs-4" data-aos="fade-up" data-aos-delay="700">
         <div class="service-item">
           <div class="media-left">
             <div class="wrap-service-icon">
@@ -509,13 +488,13 @@
           </div>
           <div class="media-body">
             <h5>multiple options</h5>
-            <p><em>Real input and oversight</em></p>
-            <p>Even the basic packages give you options as well as revision of all services.
+            <p><em>Make revisions at every step</em></p>
+            <p>It's your story, and we want to help you tell it. You make the decisions, we are just the story-tellers
             </p>
           </div>
         </div>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-4">
+      <div class="col-md-4 col-sm-4 col-xs-4" data-aos="fade-up" data-aos-delay="900">
         <div class="service-item">
           <div class="media-left">
             <div class="wrap-service-icon">
@@ -526,8 +505,8 @@
           </div>
           <div class="media-body">
             <h5>responsive design</h5>
-            <p><em>Designed for all users</em></p>
-            <p>All designs and services are built and tested to be used on multiple devices.</p>
+            <p><em>Built for all users</em></p>
+            <p>All projects are designed, developed and tested for use on multiple devices, and accessible for everyone</p>
           </div>
         </div>
       </div>
@@ -540,21 +519,14 @@
 <!-- ========================== -->
 <section class="video-section with-bottom-effect dark dark-strong">
   <div class="video-play">
-    <video playsinline="playsinline" autoplay="autoplay" [muted]="true" loop="loop">
-      <source
-        src="https://firebasestorage.googleapis.com/v0/b/sure-marketing-solutions.appspot.com/o/videos%2Fvideoplayback.mp4?alt=media&token=0269c5e6-fd1d-46cd-bce1-1654e8d3658d"
-        type="video/mp4">
-    </video>
   </div>
 
   <div class="bottom-effect"></div>
   <div class="container dark-content">
     <div class="row">
       <div class="col-md-12 text-center">
-        <div class="title">Get beautiful videos</div>
-        <em>Video is an amazing medium that grabs visitors attention, here's an example</em>
-        <a href="https://youtu.be/MFQ1CBz4sv4" target="_blank" class="btn-play fancybox-video"></a>
-        <div class="duration">Duration : <span>4:35</span></div>
+        <div class="title">Customized video production</div>
+          <p class="large text-white">Video now plays a crucial role in marketing, don't leave it behind. We produce stunning videos for every need; Instagram, Facebook, Twitter, Youtube, and more.</p>
       </div>
     </div>
   </div>
@@ -563,12 +535,13 @@
 <!-- ========================== -->
 <!-- HOME - TEAM -->
 <!-- ========================== -->
+<!-- TODO: Fix content to center or add content to fill space -->
 <section class="team-section with-bottom-effect">
   <div class="bottom-effect"></div>
   <div class="container">
     <div class="section-heading" data-aos="fade-up">
       <div class="section-title">experienced leadership</div>
-      <div class="section-subtitle">Our founder brings over a dozen years of experience along with a passion to help
+      <div class="section-subtitle">Our owner brings over a dozen years of experience along with a passion to help
         small businesses succeed</div>
       <div class="design-arrow"></div>
     </div>
@@ -583,7 +556,7 @@
           <div class="slide-description">
             <div class="member-info">
               <div class="name">Jimi Flynn</div>
-              <div class="position">Founder/Director</div>
+              <div class="position">Founder/Owner</div>
             </div>
             <div class="contacts">
               <ul>
@@ -606,7 +579,7 @@
 <!-- REVIEWS SECTION -->
 <!-- ========================== -->
 <!-- TODO: Finish Reviews Content -->
-<section class="reviews-section">
+<!-- <section class="reviews-section">
   <div class="container">
     <div class="section-heading">
       <div class="section-title">What clients said</div>
@@ -641,41 +614,19 @@
         </ng-template>
       </ng-container>
 
-      <!-- <div class="slide-item">
-          <div class="media-left">
-            <div class="image-block">
-              <img src="assets/img/review-img1.jpg" alt="" />
-            </div>
-          </div>
-          <div class="media-body">
-            <div class="description-block">
-              <div class="name">
-                <span>James H. ken </span>
-                <em>Oscend Creative Inc.</em>
-              </div>
-              <div class="review">
-                <em>Lorem ipsum dolor sit amet consecteur adipiscing elit sed eiusmod tempor ncididue labore
-                  etor dolore magna aliqua. Ut enim ad minim veniam qu nostrud exercitat ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat duis autes irure dolor rep.</em>
-              </div>
-            </div>
-          </div>
-
-        </div> -->
-
       </owl-carousel-o>
   </div>
-</section>
+</section> -->
 
 
 <!-- ========================== -->
 <!-- BUY SECTION -->
 <!-- ========================== -->
-<section class="buy-section with-icon">
+<!-- <section class="buy-section with-icon">
   <div class="section-icon"><span class="icon icon-Umbrella"></span></div>
   <div class="container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-1 col-sm-9 wow fadeInLeft">
+      <div class="col-md-8 col-md-offset-1 col-sm-9 fadeInLeft">
         <div class="section-text">
           <div class=" vcenter like">
             <span class="icon icon-Briefcase"></span>
@@ -686,17 +637,17 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3 col-sm-3 wow fadeInRight">
+      <div class="col-md-3 col-sm-3 fadeInRight">
         <a href="#" class="btn btn-info ">Get Started NOW</a>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- ========================== -->
 <!-- HOME - PRICE -->
 <!-- ========================== -->
-<section class="price-section">
+<!-- <section class="price-section">
   <div class="with-bottom-effect dark dark-strong pricing-background">
     <div class="bottom-effect"></div>
   </div>
@@ -713,7 +664,7 @@
     <div class="container">
       <div class="row no-gutter plans-list text-center">
         <div class="col-md-4 col-sm-4 vcenter">
-          <div class="plan-item wow zoomIn" data-wow-delay="0.3s">
+          <div class="plan-item zoomIn" data-wow-delay="0.3s">
             <div class="item-heading">
               <span class="name">basic</span>
               <div class="count">$125</div>
@@ -734,7 +685,7 @@
           </div>
         </div>
         <div class="col-md-4 col-sm-4 vcenter">
-          <div class="plan-item wow zoomIn active" data-wow-delay="0.6s">
+          <div class="plan-item zoomIn active" data-wow-delay="0.6s">
             <div class="item-heading">
               <span class="name">popular</span>
               <div class="count">$175</div>
@@ -755,7 +706,7 @@
           </div>
         </div>
         <div class="col-md-4  col-sm-4 vcenter">
-          <div class="plan-item wow zoomIn" data-wow-delay="0.3s">
+          <div class="plan-item zoomIn" data-wow-delay="0.3s">
             <div class="item-heading">
               <span class="name">premier</span>
               <div class="count">$250</div>
@@ -778,14 +729,14 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 
 <!-- ========================== -->
 <!-- HOME - LATEST NEWS -->
 <!-- ========================== -->
-<section class="latest-news-section with-icon with-top-effect clearfix">
+<!-- <section class="latest-news-section with-icon with-top-effect clearfix">
   <div class="section-icon"><span class="icon icon-Umbrella"></span></div>
   <div class="container">
     <div class="section-heading">
@@ -796,7 +747,7 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-md-4 col-sm-4 wow fadeInUp">
+      <div class="col-md-4 col-sm-4 fadeInUp">
         <div class="news-item">
           <div class="meta">
             <div class="meta-item"><span class="icon icon-Tag"></span>MOBile ui, creative</div>
@@ -825,7 +776,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 col-sm-4 wow fadeInUp">
+      <div class="col-md-4 col-sm-4 fadeInUp">
         <div class="news-item">
           <div class="meta">
             <div class="meta-item"><span class="icon icon-Tag"></span>project</div>
@@ -854,7 +805,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 col-sm-4 wow fadeInUp">
+      <div class="col-md-4 col-sm-4 fadeInUp">
         <div class="news-item">
           <div class="meta">
             <div class="meta-item"><span class="icon icon-Tag"></span>photography, analysis</div>
@@ -885,32 +836,74 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <!-- ========================== -->
-<!-- HOME - SLIDER -->
+<!-- HOME - TWITTER FEED -->
 <!-- ========================== -->
-<section class="slider-section dark dark-strong with-bottom-effect">
+<!-- <section class="slider-section dark dark-strong with-bottom-effect">
   <div class="bottom-effect"></div>
   <div class="dark-content">
     <div class="wrap-section-slider enable-owl-carousel" data-single-item="true">
       <div class="slide-item">
-        <div class="slider-title">latest from twitter <i class="fa fa-twitter"></i> oscend creative agency</div>
+        <div class="slider-title">latest from twitter <i class="fa fa-twitter"></i> sure marketing solutions</div>
         <p class="large">Lorem ipsum dolor sit amet consecteur adipiscing elit sed eiusmod tempor ncididue ut labore
           etor dolore magna aliqua. Ut enim <br />
           minim veniam qua nostrud exercitat ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         <div class="time">2 minutes ago</div>
       </div>
       <div class="slide-item">
-        <div class="slider-title">latest from twitter <i class="fa fa-twitter"></i> oscend creative agency</div>
+        <div class="slider-title">latest from twitter <i class="fa fa-twitter"></i> sure marketing solutions</div>
         <p class="large">Lorem ipsum dolor sit amet consecteur adipiscing elit sed eiusmod tempor ncididue ut labore
           etor dolore magna aliqua. Ut enim <br />
           minim veniam qua nostrud exercitat ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         <div class="time">6 minutes ago</div>
       </div>
       <div class="slide-item">
-        <div class="slider-title">latest from twitter <i class="fa fa-twitter"></i> oscend creative agency</div>
+        <div class="slider-title">latest from twitter <i class="fa fa-twitter"></i> sure marketing solutions</div>
+        <p class="large">Lorem ipsum dolor sit amet consecteur adipiscing elit sed eiusmod tempor ncididue ut labore
+          etor dolore magna aliqua. Ut enim <br />
+          minim veniam qua nostrud exercitat ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <div class="time">12 minutes ago</div>
+      </div>
+      <div class="slide-item">
+        <div class="slider-title">latest from twitter <i class="fa fa-twitter"></i> sure marketing solutions</div>
+        <p class="large">Lorem ipsum dolor sit amet consecteur adipiscing elit sed eiusmod tempor ncididue ut labore
+          etor dolore magna aliqua. Ut enim <br />
+          minim veniam qua nostrud exercitat ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <div class="time">2 minutes ago</div>
+      </div>
+      <div class="slide-item">
+        <div class="slider-title">latest from twitter <i class="fa fa-twitter"></i> sure marketing solutions</div>
+        <p class="large">Lorem ipsum dolor sit amet consecteur adipiscing elit sed eiusmod tempor ncididue ut labore
+          etor dolore magna aliqua. Ut enim <br />
+          minim veniam qua nostrud exercitat ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <div class="time">6 minutes ago</div>
+      </div>
+      <div class="slide-item">
+        <div class="slider-title">latest from twitter <i class="fa fa-twitter"></i> sure marketing solutions</div>
+        <p class="large">Lorem ipsum dolor sit amet consecteur adipiscing elit sed eiusmod tempor ncididue ut labore
+          etor dolore magna aliqua. Ut enim <br />
+          minim veniam qua nostrud exercitat ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <div class="time">12 minutes ago</div>
+      </div>
+      <div class="slide-item">
+        <div class="slider-title">latest from twitter <i class="fa fa-twitter"></i> sure marketing solutions</div>
+        <p class="large">Lorem ipsum dolor sit amet consecteur adipiscing elit sed eiusmod tempor ncididue ut labore
+          etor dolore magna aliqua. Ut enim <br />
+          minim veniam qua nostrud exercitat ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <div class="time">2 minutes ago</div>
+      </div>
+      <div class="slide-item">
+        <div class="slider-title">latest from twitter <i class="fa fa-twitter"></i> sure marketing solutions</div>
+        <p class="large">Lorem ipsum dolor sit amet consecteur adipiscing elit sed eiusmod tempor ncididue ut labore
+          etor dolore magna aliqua. Ut enim <br />
+          minim veniam qua nostrud exercitat ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <div class="time">6 minutes ago</div>
+      </div>
+      <div class="slide-item">
+        <div class="slider-title">latest from twitter <i class="fa fa-twitter"></i> sure marketing solutions</div>
         <p class="large">Lorem ipsum dolor sit amet consecteur adipiscing elit sed eiusmod tempor ncididue ut labore
           etor dolore magna aliqua. Ut enim <br />
           minim veniam qua nostrud exercitat ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
@@ -919,15 +912,15 @@
 
     </div>
   </div>
-</section>
+</section> -->
 
 
 <!-- ========================== -->
 <!-- HOME - CLIENTS -->
 <!-- ========================== -->
-<section class="clients-section clearfix">
+<!-- <section class="clients-section clearfix">
   <div class="container">
-    <div class="section-heading wow fadeInDown" data-aos="fade-down">
+    <div class="section-heading fadeInDown" data-aos="fade-down">
       <div class="section-title">trusted clients</div>
       <div class="section-subtitle">We want to add your business to this list</div>
       <div class="design-arrow"></div>
@@ -951,5 +944,122 @@
         <img src="assets/img/partners/partner-2.png" alt="Trusted Partner Logo Image" />
       </div>
     </div>
+  </div>
+</section> -->
+
+<!-- ========================== -->
+<!-- HOME - CONTACT US -->
+<!-- ========================== -->
+<section id="contact-section" class="top-header countact-us-header with-bottom-effect transparent-effect dark dark-strong">
+  <div class="bottom-effect"></div>
+  <div class="header-container">
+    <div class="header-title">
+      <div class="header-icon"><span class="icon icon-Wheelbarrow"></span></div>
+      <div class="title">contact us</div>
+      <em>For more information & a free quote</em>
+    </div>
+  </div>
+  <!--container-->
+</section>
+<section style="margin-bottom: 120px;" class="contact-us-section contact-us-reverse-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <div class="contact-block">
+
+              <div class="contact-block-heading">
+                <h3>keep in touch</h3>
+                <p><b>Why wait?</b> Take the first step towards building your business now! Contact <b>Sure Marketing Solutions</b> today for a free consultation and quote.</p>
+              </div>
+              <div class="row contacts-list">
+                <div class="col-md-12">
+                  <div class="type-info">
+                    <i class="icon icon-House"></i>
+                    address
+                  </div>
+                  <div class="info">
+                    <p class="py-1">843 Fairbanks Ave, Newark OH 43055</p>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="type-info pull-left">
+                    <i class="icon icon-Phone2"></i>
+                    phone
+                  </div>
+                  <div class="info">
+                    <p class="py-1">614 452 4916</p>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="type-info pull-left">
+                    <i class="icon icon-Mail"></i>
+                    email
+                  </div>
+                  <div class="info">
+                    <p class="py-1"><a
+                        href="mailto:info@suremarketingsolutions.com">info@suremarketingsolutions.com</a></p>
+                  </div>
+                </div>
+                <!-- <div class="col-md-12 clearfix">
+                  <div class="type-info pull-left">
+                    <i class="icon icon-Mouse"></i>
+                    Skype Chat
+                  </div>
+                  <div class="info pull-right text-right">
+                    <p class="no-margin"></p>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-7 col-md-offset-1 col-sm-6">
+        <div class="contact-form">
+          <div class="form-heading">
+            <h5>send a message</h5>
+          </div>
+          <form #contactForm="ngForm" name="contact-form" id="contact-form">
+            <div id="response"></div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input [(ngModel)]="contactModel.firstname" #firstname="ngModel" type="text" name="firstName" id="firstName" placeholder="YOUR NAME" class="form-control" required />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input [(ngModel)]="contactModel.lastname" #lastname="ngModel" type="text" name="lastName" id="lastName" placeholder="YOUR NAME" class="form-control" required />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input [(ngModel)]="contactModel.phone" #phone="ngModel" type="text" name="phone" id="phone" placeholder="PHONE NO." class="form-control" required />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input [(ngModel)]="contactModel.email" #email="ngModel" type="email" name="email" id="email" placeholder="EMAIL" class="form-control" required />
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <textarea [(ngModel)]="contactModel.message" #message="ngModel" class="form-control" name="message" id="message" placeholder="MESSAGE (optional)"></textarea>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <button type="button" id="submit" class="btn btn-default" (click)="addContact(contactModel, contactForm)" [disabled]="contactForm.errors">send message</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>

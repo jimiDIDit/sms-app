@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { BehaviorSubject } from 'rxjs';
+import { DataService } from 'src/app/core/services/data.service';
 
 @Component({
   selector: 'sms-home',
@@ -40,6 +41,10 @@ export class HomeComponent implements OnInit {
                   etor dolore magna aliqua. Ut enim ad minim veniam qu nostrud exercitat ullamco laboris
                   nisi ut aliquip ex ea commodo consequat duis autes irure dolor rep.`
     }
+  ];
+
+  portfolio = [
+    1,2,3,1,2,3,1,2,3,1,2,3,1,2,3
   ]
 
   reviewsSliderOptions: OwlOptions = {
@@ -58,9 +63,30 @@ export class HomeComponent implements OnInit {
       }
     },
   }
-  constructor() { }
+
+  contactModel: any = {};
+  subscriberModel: any = {};
+  constructor(private dataService: DataService) { }
+
+  async addSubscriber(email: string, form: any) {
+    const data: any = {
+      email,
+      timestamp: new Date(),
+    };
+    await this.dataService.addSubscriber(data);
+    form.reset();
+  }
+
+  async addContact(data: any, form?: any) {
+    if (!data) return;
+    const timestamp = new Date();
+    data.timestamp = timestamp;
+    await this.dataService.addContact(data);
+    form.reset();
+  }
 
   ngOnInit(): void {
+    // this.successModal.openModal();
   }
 
 }

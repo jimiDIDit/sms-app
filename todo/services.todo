@@ -1,0 +1,25 @@
+Services:
+  ☐ Data
+    ✔ contact @done(21-04-01 20:43)
+    ✔ subscriber @done(21-04-01 20:43)
+    ☐ user/visitor
+    ☐ client
+    ✔ consultation @done(21-04-01 20:43)
+
+  ✔ Contact @done(21-04-01 20:44)
+    ✔ add new contact @done(21-04-01 20:43)
+
+  ✔ Subscriber @done(21-04-01 20:44)
+    ✔ add new subscriber @done(21-04-01 20:43)
+
+  ✔ Consultation @done(21-04-01 20:44)
+    ✔ add new consultation @done(21-04-01 20:44)
+
+  ☐ User
+    ☐ save user/visitor data
+
+  ☐ Client
+    ☐ create new client
+    ☐ edit client goals
+    ☐ client messaging
+
