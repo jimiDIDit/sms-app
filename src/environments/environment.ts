@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: 'AIzaSyADM7BtzEZTeTgytpDLbeUK3zzs5ldlyIY',
+    apiKey: '',
     authDomain: 'sure-marketing-solutions.firebaseapp.com',
     databaseURL: 'https://sure-marketing-solutions.firebaseio.com',
     projectId: 'sure-marketing-solutions',
